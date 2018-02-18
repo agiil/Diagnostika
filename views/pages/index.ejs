@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <% include ../partials/pais.ejs %>
+  </head>
+
+  <body onload='alusta()'>
+
+    <% include ../partials/pealkiri.ejs %>
+
+      <h2>1 Sea usaldusankur</h2>
+      <p>Lae üles metateabe allkirjasert. Sert peab olema PEM-vormingus</p>
+
+      <div style='display: flex; align-items: center;'>
+
+        Vali sert:&nbsp;
+
+        <input type="file" id="failivalik" autocomplete="off" onchange="tootleFailivalik(this.files)" style='margin-left: 1rem;'>
+
+        <span id="valitudFail"></span>
+
+        <span id='upload' class='nupp' onclick="loeFailSirvikusse()">
+          Lae üles
+          <!-- i class="ikoon material-icons">cloud_upload</i -->
+        </span>
+
+      </div>
+
+      <p id='sert'></p>
+
+      <h2>2 Kontrolli metateavet</h2>
+
+      <p><i>Praegu teostatud allkirja kontroll usaldusankru vastu (ahela kontrollita)</i></p>
+
+      <div style='display: flex; align-items: center;'>
+
+        Metateabe URL:
+
+        <!-- autocomplete="off" -->
+        <input type="url" id='metaurl' size='60' style='margin-left: 1rem; margin-right: 2rem;'>
+
+        <span id='upload' class='nupp' onclick="kontrolliMeta()">
+          Kontrolli
+        </span>
+
+      </div>
+
+      <p id='metakontrollitulemus'></p>
+
+      <h2>3 Saada SAML-autentimispäring</h2>
+      <p><i>Veel teostamata</i></p>
+
+      <p>Päringute vastuvõtuaadress:</p>
+
+      <h2>4 Vaata diagnostika aruannet</h2>
+      <p><i>Veel teostamata</i></p>
+
+      <p>Aruanne (uueneb dünaamiliselt):</p>
+      <div id='aruanne'></div>
+
+      <% include ../partials/jalus.ejs %>
+
+  </body>
+
+</html>
