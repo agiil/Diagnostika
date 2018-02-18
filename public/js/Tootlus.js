@@ -32,8 +32,8 @@ function loeFailSirvikusse() {
 */
 function kontrolliMeta() {
   var url = $('#metaurl').val();
-  $.post("http://localhost:5000/metakontroll",
-  //$.post("https://diagnostika.herokuapp.com/metakontroll",
+  // $.post("http://localhost:5000/metakontroll",
+  $.post("https://diagnostika.herokuapp.com/metakontroll",
     {
       url: url,
       sert: sert
